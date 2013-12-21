@@ -7,9 +7,7 @@ body {
 }
 
 @media all and (max-width: 48em) { /* Same as #wrapper width. */
-	body {
-		padding: 1em;
-	}
+	body { padding: 1em; }
 }
 
 @media
@@ -122,8 +120,4 @@ a {
 	}
 		#links li:first-child { margin-left: 0; }
 
-#footer {
-	display: inline-block;
-	padding-top: 1em;
-	border-top: 0.1em solid rgba(255, 255, 255, 0.2);
-}
+#footer { padding-top: 1em; }

@@ -1,0 +1,9 @@
+safe: true
+timezone: Europe/Stockholm
+
+title: Interpreti Veneziani
+description: A fan-made website dedicated to the music of Venetian baroque ensemble Interpreti Veneziani.
+live_url: http://sanvidal.org
+live_hostname: sanvidal.org
+email: info@sanvidal.org
+google_analytics_id: UA-46665893-1
