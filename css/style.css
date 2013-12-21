@@ -1,5 +1,5 @@
 body {
-	background: #1a1a1a url(../img/black_lozenge/black_lozenge.png);
+	background: #171717 url(../img/black_lozenge/black_lozenge.png);
 	color: #ccc;
 	margin: 0;
 	padding: 2em 2em 1.5em 2em;
@@ -71,7 +71,7 @@ a {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-		background-color: #1a1a1a; /* Will be replaced by adaptive background color using JavaScript. */
+		background-color: #171717; /* Will be replaced by adaptive background color using JavaScript. */
 		padding: 1em;
 		display: inline-block;
 		width: 25%;
