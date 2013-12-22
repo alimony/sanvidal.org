@@ -127,7 +127,7 @@ a {
 }
 	#links li {
 		display: inline-block;
-		margin: 0 0 0.5em 1em;
+		margin: 0 0 0.5em 1.5em;
 	}
 		#links li:first-child { margin-left: 0; }
 
