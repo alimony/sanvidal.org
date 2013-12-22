@@ -1,6 +1,16 @@
 $(document).ready(function () {
 	'use strict';
 
+	// This function will determine if the given date is today based on year,
+	// month and day only. This is useful for displaying concert dates in the
+	// near future differently, i.e. with some more urgency.
+	function isToday(date) {
+		var now = moment();
+		return (date.year() === now.year() &&
+			date.month() === now.month() &&
+			date.date() === now.date());
+	}
+
 	var ARTIST_ID = 3592216; // Interpreti Veneziani on Discogs.
 	var NUMBER_OF_RELEASES = 18; // To keep track of how many releases are left to add on Discogs.
 	var RELEASES_API_URL = 'http://api.discogs.com/artists/' + ARTIST_ID + '/releases';
@@ -112,7 +122,8 @@ $(document).ready(function () {
 				$.each(_.keys(calendar[year]), function (index, month) {
 					elementsToAdd.push('<h4>' + moment.months()[month] + ':');
 					$.each(_.keys(calendar[year][month]), function (index, day) {
-						elementsToAdd.push('<a href="' + calendar[year][month][day] + '" target="_blank">' + day + '</a>');
+						var date = moment(year + '-' + (+month + 1) + '-' + day);
+						elementsToAdd.push('<a ' + (isToday(date) ? 'class="today" ' : '') + 'href="' + calendar[year][month][day] + '" target="_blank">' + day + '</a>');
 					});
 					elementsToAdd.push('</h4>');
 				});
