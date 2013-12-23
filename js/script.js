@@ -122,8 +122,11 @@ $(document).ready(function () {
 				$.each(_.keys(calendar[year]), function (index, month) {
 					elementsToAdd.push('<h4>' + moment.months()[month] + ':');
 					$.each(_.keys(calendar[year][month]), function (index, day) {
+						elementsToAdd.push('<a href="' + calendar[year][month][day] + '" target="_blank">' + day + '</a>');
 						var date = moment(year + '-' + (+month + 1) + '-' + day);
-						elementsToAdd.push('<a ' + (isToday(date) ? 'class="today" ' : '') + 'href="' + calendar[year][month][day] + '" target="_blank">' + day + '</a>');
+						if (isToday(date)) {
+							elementsToAdd.push('<em class="today">(tonight)</em>');
+						}
 					});
 					elementsToAdd.push('</h4>');
 				});

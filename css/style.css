@@ -108,16 +108,10 @@ a {
 	display: inline-block;
 	margin: 0 0 0.5em 1em;
 }
-	#concerts a.today::before{
-		content: "today";
+	#concerts .today {
 		font-size: 90%;
-		position: absolute;
-		background-color: rgb(253, 208, 23);
-		color: black;
-		text-align: center;
-		width: 3em;
-		margin: 2em 0 0 -1.2em;
-		padding: 0.1em 0.3em;
+		padding-left: 0.55em;
+		margin-right: -0.55em;
 	}
 
 #links {
