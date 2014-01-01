@@ -2,7 +2,7 @@ safe: true
 timezone: Europe/Stockholm
 
 title: Interpreti Veneziani
-description: A fan-made website dedicated to the music of Venetian baroque ensemble Interpreti Veneziani.
+description: Website dedicated to the music of Venetian baroque ensemble Interpreti Veneziani.
 live_url: http://sanvidal.org
 live_hostname: sanvidal.org
 author: Markus Amalthea Magnuson
