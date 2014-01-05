@@ -108,6 +108,8 @@ a {
 	display: inline-block;
 	margin: 0 0 0.5em 1em;
 }
+	#concerts a.error { margin: 0; }
+
 	#concerts .today {
 		font-size: 90%;
 		padding-left: 0.55em;
