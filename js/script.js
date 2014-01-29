@@ -29,7 +29,8 @@ $(document).ready(function () {
 		5204682: '/disco-140-il-cimento-dellarmonia-e-dellinvenzione-i-le-quattro-stagioni.html',
 		5315345: '/disco-138-allegro-con-fuoco.html',
 		5315533: '/disco-172-bravo.html',
-		5340346: '/disco-147-il-cimento-dellarmonia-e-dellinvenzione-ii.html'
+		5340346: '/disco-147-il-cimento-dellarmonia-e-dellinvenzione-ii.html',
+		5343382: '/disco-141-davide-amadio---concerts-for-cello.html'
 	};
 
 	// This is a general purpose function for making Ajax calls over JSONP with
