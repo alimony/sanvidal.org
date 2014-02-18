@@ -93,10 +93,13 @@ $(document).ready(function () {
 			// unnecessarily long titles.
 			var title = release.title.split('-')[0];
 
-			// Get the thumbnail image from the Discogs CDN instead of API.
+			// Get the thumbnail image from a local copy instead of Discogs.
+			// It's not allowed to hotlink their images, and we can't
+			// authenticate as needed for image requests, since this is
+			// client-side code and any OAuth secret would be... not secret.
 			// Before: http://api.discogs.com/image/R-150-5340346-1390948761-8433.jpeg
-			var thumb = release.thumb.replace('api.discogs.com', 's.pixogs.com')
-			// After: http://s.pixogs.com/image/R-150-5340346-1390948761-8433.jpeg
+			var thumb = release.thumb.replace('http://api.discogs.com/image/', '/img/thumbs/');
+			// After: /img/thumbs/R-150-5340346-1390948761-8433.jpeg
 
 			elementsToAdd.push('' +
 				'<div class="release">' +
