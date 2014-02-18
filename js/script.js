@@ -120,6 +120,32 @@ $(document).ready(function () {
 		// Remove the "Loading..." text by emptying its parent, and add all elements.
 		$('#releases').empty().append(elementsToAdd.join(''));
 
+		// Because some titles span more than one line we get a height mismatch
+		// that looks sub-beautiful. To remedy, single-line titles have extra
+		// vertical margin with a total height of one line of text. Titles on
+		// more than one line will not have this extra margin. The end result is
+		// all box heights being equal.
+
+		// First, figure out the height of one line of text in a title element.
+		var titleElements = $('.release h3');
+		var oneLineHeight = 10000;  // Just something really high to begin with.
+		$.each(titleElements, function (index, element) {
+			var h = $(element).height();
+			if (h < oneLineHeight) {	
+				oneLineHeight = h;
+			}
+		});
+
+		// Now, loop over all the title elements again and set a special class
+		// on all titles that span more than one line.
+		$.each(titleElements, function (index, element) {
+			var el = $(element);
+			var h = el.height();
+			if (h > oneLineHeight) {	
+				el.addClass('minus-height');
+			}
+		});
+
 		// Color all album backgrounds based on colors in the image.
 		$.adaptiveBackground.run({
 			parent: 'div.release'
