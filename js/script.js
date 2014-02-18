@@ -93,6 +93,13 @@ $(document).ready(function () {
 			// unnecessarily long titles.
 			var title = release.title.split('-')[0];
 
+			// If there is exactly one comma in the title, that is a good place
+			// for a line break.
+			var matches = title.match(/,/g);
+			if (matches && matches.length == 1) {
+				title = title.replace(',', ',<br />');
+			}
+
 			// Get the thumbnail image from a local copy instead of Discogs.
 			// It's not allowed to hotlink their images, and we can't
 			// authenticate as needed for image requests, since this is
