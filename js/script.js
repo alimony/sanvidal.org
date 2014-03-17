@@ -30,7 +30,8 @@ $(document).ready(function () {
 		5315345: '/disco-138-allegro-con-fuoco.html',
 		5315533: '/disco-172-bravo.html',
 		5340346: '/disco-147-il-cimento-dellarmonia-e-dellinvenzione-ii.html',
-		5343382: '/disco-141-davide-amadio---concerts-for-cello.html'
+		5343382: '/disco-141-davide-amadio---concerts-for-cello.html',
+		5504886: '/disco-20-concerti.html'
 	};
 
 	// This is a general purpose function for making Ajax calls over JSONP with
@@ -96,7 +97,7 @@ $(document).ready(function () {
 			// If there is exactly one comma in the title, that is a good place
 			// for a line break.
 			var matches = title.match(/,/g);
-			if (matches && matches.length == 1) {
+			if (matches && matches.length === 1) {
 				title = title.replace(',', ',<br />');
 			}
 
@@ -138,7 +139,7 @@ $(document).ready(function () {
 		var oneLineHeight = 10000;  // Just something really high to begin with.
 		$.each(titleElements, function (index, element) {
 			var h = $(element).height();
-			if (h < oneLineHeight) {	
+			if (h < oneLineHeight) {
 				oneLineHeight = h;
 			}
 		});
@@ -148,7 +149,7 @@ $(document).ready(function () {
 		$.each(titleElements, function (index, element) {
 			var el = $(element);
 			var h = el.height();
-			if (h > oneLineHeight) {	
+			if (h > oneLineHeight) {
 				el.addClass('minus-height');
 			}
 		});
