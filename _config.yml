@@ -1,5 +1,6 @@
 safe: true
 timezone: Europe/Stockholm
+markdown: kramdown
 
 title: Interpreti Veneziani
 description: Website dedicated to the music of Venetian baroque ensemble Interpreti Veneziani.
