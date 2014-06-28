@@ -32,7 +32,9 @@ $(document).ready(function () {
 		5340346: '/disco-147-il-cimento-dellarmonia-e-dellinvenzione-ii.html',
 		5343382: '/disco-141-davide-amadio---concerts-for-cello.html',
 		5504886: '/disco-20-concerti.html',
-		5563307: '/disco-174-genius.html'
+		5563307: '/disco-174-genius.html',
+		5833121: '/disco-142-il-maestro-delle-nazioni.html',
+		5833461: '/disco-148-vivaldi---corelli.html'
 	};
 
 	// This is a general purpose function for making Ajax calls over JSONP with
