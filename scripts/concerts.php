@@ -11,7 +11,7 @@ if (file_exists(CONCERTS_JSON)) {
 }
 
 // Check if a callback name was supplied, if so this is JSONP.
-$callback = filter_input(INPUT_GET, 'FILTER_SANITIZE_STRING', FILTER_SANITIZE_SPECIAL_CHARS);
+$callback = filter_input(INPUT_GET, 'callback', FILTER_SANITIZE_STRING);
 
 // Set content type for JSONP or JSON, depending on if there was a callback name.
 header('Content-Type: ' . (!empty($callback) ? 'application/javascript' : 'application/json') . ';charset=UTF-8');
