@@ -4,22 +4,21 @@
 // server daily, through the fetch_interpreti_concerts.py script.
 define('CONCERTS_JSON', 'concerts.json');
 
-$data = "[]";
+$data = '[]';
 
 if (file_exists(CONCERTS_JSON)) {
 	$data = file_get_contents(CONCERTS_JSON);
 }
 
 // Check if a callback name was supplied, if so this is JSONP.
-$callback = (isset($_GET["callback"]) && strlen($_GET["callback"]) > 0) ? $_GET["callback"] : false;
+$callback = filter_input(INPUT_GET, 'FILTER_SANITIZE_STRING', FILTER_SANITIZE_SPECIAL_CHARS);
 
 // Set content type for JSONP or JSON, depending on if there was a callback name.
-header("Content-Type: " . ($callback ? "application/javascript" : "application/json") . ";charset=UTF-8");
+header('Content-Type: ' . (!empty($callback) ? 'application/javascript' : 'application/json') . ';charset=UTF-8');
 
 // Finally, output the data.
 if ($callback) {
-	echo $callback . "(" . $data . ")";
+	$data = sprintf('%s(%s)', $callback, $data);
 }
-else {
-	echo $data;
-}
+
+echo $data;
