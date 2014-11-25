@@ -117,8 +117,10 @@ $(document).ready(function () {
 			// It's not allowed to hotlink their images, and we can't
 			// authenticate as needed for image requests, since this is
 			// client-side code and any OAuth secret would be... not secret.
-			// Before: http://api.discogs.com/image/R-150-5340346-1390948761-8433.jpeg
-			var thumb = release.thumb.replace('http://api.discogs.com/images/R-90-', '/img/thumbs/R-150-');
+			// Before: http://api.discogs.com/images/R-90-5195481-1387129188-3089.jpeg
+			var thumb = release.thumb.replace('http://api.discogs.com/images/', '/img/thumbs/');
+			// Always use the 150 pixel thumbnail.
+			thumb = thumb.replace('R-90-', 'R-150-');
 			// After: /img/thumbs/R-150-5340346-1390948761-8433.jpeg
 
 			elementsToAdd.push('' +
