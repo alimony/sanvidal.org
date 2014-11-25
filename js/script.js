@@ -38,6 +38,8 @@ $(document).ready(function () {
 		6344363: '/disco-176-emmanuele-baldini---interpreti-veneziani.html'
 	};
 
+	var SKIP_RELEASES = [5378462];
+
 	// This is a general purpose function for making Ajax calls over JSONP with
 	// retries and error handling, the latter due to the fact that such calls
 	// in jQuery will fail silently instead of triggering any error callback.
@@ -89,6 +91,12 @@ $(document).ready(function () {
 		var elementsToAdd = [];
 
 		$.each(releases, function (index, release) {
+			// We don't want some releases, because they are duplicates, or
+			// something else.
+			if (_.contains(SKIP_RELEASES, release.id)) {
+				return;
+			}
+
 			// If there no website was found in our static data above, this
 			// will default to the base URL instead.
 			var url = WEBSITE_BASE_URL + (WEBSITE_PATHS[release.id] || '');
@@ -121,7 +129,7 @@ $(document).ready(function () {
 				'</div>');
 		});
 
-		var releasesLeft = NUMBER_OF_RELEASES - releases.length;
+		var releasesLeft = NUMBER_OF_RELEASES - releases.length + SKIP_RELEASES.length;
 		if (releasesLeft > 0) {
 			elementsToAdd.push('' +
 				'<div class="release" style="background: none;">' +
