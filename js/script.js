@@ -34,7 +34,8 @@ $(document).ready(function () {
 		5504886: '/disco-20-concerti.html',
 		5563307: '/disco-174-genius.html',
 		5833121: '/disco-142-il-maestro-delle-nazioni.html',
-		5833461: '/disco-148-vivaldi---corelli.html'
+		5833461: '/disco-148-vivaldi---corelli.html',
+		6344363: '/disco-176-emmanuele-baldini---interpreti-veneziani.html'
 	};
 
 	// This is a general purpose function for making Ajax calls over JSONP with
