@@ -25,7 +25,7 @@ $(document).ready(function () {
 		5195481: '/disco-139-strings-dances.html',
 		5196226: '/disco-143-virtuoso.html',
 		5199356: '/disco-175-geminiani-albinoni-vivaldi.html',
-		5202488: '/en/disco-145-yumi-yamagata---dreaming-venice.html',
+		5202488: '/disco-145-yumi-yamagata---dreaming-venice.html',
 		5204682: '/disco-140-il-cimento-dellarmonia-e-dellinvenzione-i-le-quattro-stagioni.html',
 		5315345: '/disco-138-allegro-con-fuoco.html',
 		5315533: '/disco-172-bravo.html',
