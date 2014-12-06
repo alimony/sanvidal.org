@@ -36,7 +36,8 @@ $(document).ready(function () {
 		5833121: '/disco-142-il-maestro-delle-nazioni.html',
 		5833461: '/disco-148-vivaldi---corelli.html',
 		6344363: '/disco-176-emmanuele-baldini---interpreti-veneziani.html',
-		6362952: '/disco-173-gianni-amadio---concerti-per-contrabbasso.html'
+		6362952: '/disco-173-gianni-amadio---concerti-per-contrabbasso.html',
+		6383594: '/disco-150-appassionato.html'
 	};
 
 	var SKIP_RELEASES = [5378462];
