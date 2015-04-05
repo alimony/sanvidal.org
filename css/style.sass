@@ -1,0 +1,140 @@
+---
+---
+
+$wrapper-width: 80em
+$small-width: 48em
+$body-padding-x: 2em
+
+body
+	background: #171717 url(../img/black_lozenge/black_lozenge.png)
+	color: #ccc
+	margin: 0
+	padding: 2em $body-padding-x 1.5em $body-padding-x
+	font: 100%/1.4 Cardo, serif
+
+	@media all and (max-width: $small-width)
+		padding: 1em
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+		background-image: url(../img/black_lozenge/black_lozenge_@2X.png)
+		background-size: 38px 38px
+
+#wrapper
+	max-width: $wrapper-width
+	margin: 0 auto
+
+p
+	margin: 1em 0 0 0
+
+h1, h2, h3
+	margin: 0
+	color: #fdd017
+
+h2, h3
+	font-style: italic
+
+h1
+	font: 700%/1.1 "Miss Fajardose", cursive
+	text-shadow: 0 0 0.1em rgba(253, 208, 23, 0.7)
+	text-align: center
+
+h2
+	margin: 1em 0
+
+h1 + h2
+	margin-top: 0
+
+h3
+	// Sum of heights should be same multiplier as body line-height, in ems.
+	margin-top: 0.4em
+	margin-bottom: 1em
+
+	&.minus-height
+		margin: 0
+
+h4
+	font-size: 100%
+	margin: 1.25em 0 0.75em 0
+
+a
+	color: rgb(253, 208, 23)
+	text-decoration: none
+	border-bottom: 0.1em solid rgba(253, 208, 23, 0.5)
+
+	&:hover,
+	.image-link:hover + h3 a
+		color: rgb(253, 231, 41)
+		border-bottom: 0.1em solid rgb(253, 231, 41)
+
+.image-link
+	border: none
+
+	&:hover
+		border: none
+
+#releases
+	margin-top: 1em
+
+	.release
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		background-color: #171717 // Will be replaced by adaptive background color using JavaScript.
+		padding: 1em
+		display: inline-block
+		width: 25%
+		text-align: center
+		vertical-align: middle
+
+		// Gradually split the release grid into fewer and fewer columns as the
+		// page width gets smaller, which works nicely all the way down to mobile.
+
+		@media all and (max-width: $wrapper-width + $body-padding-x)
+			width: 33.33333%
+
+		@media all and (max-width: 64em)
+			width: 50%
+
+		@media all and (max-width: $small-width)
+			width: 100%
+
+			h3
+				margin: 0
+
+		img
+			margin-top: 0.5em
+			-webkit-box-shadow: 0 0 0.5em 0 rgba(20, 20, 20, 0.7)
+			box-shadow: 0 0 0.5em 0 rgba(20, 20, 20, 0.7)
+
+		.year
+			font-size: 110%
+			display: inline-block
+			margin-top: 0.25em
+
+#concerts
+	a
+		display: inline-block
+		margin: 0 0 0.5em 1em
+
+		&.error
+			margin: 0
+
+	.today
+		font-size: 90%
+		padding-left: 0.55em
+		margin-right: -0.55em
+
+#links
+	list-style: none
+	margin: 0
+	padding: 0
+
+	li
+		display: inline-block
+		margin: 0 0 0.5em 1.5em
+
+		&:first-child
+			margin-left: 0
+
+#footer
+	padding-top: 1em
