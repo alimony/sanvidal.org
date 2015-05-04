@@ -12,7 +12,7 @@ $(document).ready(function () {
 	}
 
 	var ARTIST_ID = 3592216; // Interpreti Veneziani on Discogs.
-	var NUMBER_OF_RELEASES = 18; // To keep track of how many releases are left to add on Discogs.
+	var NUMBER_OF_RELEASES = 19; // To keep track of how many releases are left to add on Discogs.
 	var RELEASES_API_URL = 'http://api.discogs.com/artists/' + ARTIST_ID + '/releases';
 	var WEBSITE_BASE_URL = 'http://www.interpretiveneziani.com/en';
 	var CONCERTS_JSONP_URL = 'http://konstochvanligasaker.se/sanvidal.org/scripts/concerts.php';
@@ -40,7 +40,8 @@ $(document).ready(function () {
 		6383594: '/disco-150-appassionato.html'
 	};
 
-	var SKIP_RELEASES = [5378462];
+	// TODO: Add 6941136 properly.
+	var SKIP_RELEASES = [5378462, 6941136];
 
 	// This is a general purpose function for making Ajax calls over JSONP with
 	// retries and error handling, the latter due to the fact that such calls
