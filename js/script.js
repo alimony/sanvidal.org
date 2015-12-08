@@ -41,7 +41,7 @@ $(document).ready(function () {
 	};
 
 	// TODO: Add 6941136 properly.
-	var SKIP_RELEASES = [5378462, 6941136];
+	var SKIP_RELEASES = [5378462, 6941136, 7497859];
 
 	// This is a general purpose function for making Ajax calls over JSONP with
 	// retries and error handling, the latter due to the fact that such calls
