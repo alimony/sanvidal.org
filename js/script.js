@@ -53,11 +53,6 @@ $(document).ready(function () {
         }
     }
 
-    // Color all album backgrounds based on colors in the image.
-    $.adaptiveBackground.run({
-        parent: 'div.release'
-    });
-
     // Fetch all upcoming concert dates and wrestle them into a simpler object.
     getJSONP(CONCERTS_JSONP_URL,
     // Success callback.
