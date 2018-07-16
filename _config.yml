@@ -4,7 +4,7 @@ markdown: kramdown
 
 title: Interpreti Veneziani
 description: Website dedicated to the music of Venetian baroque ensemble Interpreti Veneziani.
-live_url: http://sanvidal.org
+live_url: https://sanvidal.org
 live_hostname: sanvidal.org
 author: Markus Amalthea Magnuson
 email: info@sanvidal.org
